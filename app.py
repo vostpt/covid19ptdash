@@ -27,14 +27,14 @@ fig = px.bar(df)
 
 
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(children='COVID-19'),
 
     html.Div(children='''
-        Dash: A web application framework for Python.
+        DASHBOARD EM PYTHON
     '''),
 
     dcc.Graph(
-        id='example-graph',
+        id='dashboard',
         figure=fig
     )
 ])
