@@ -28,15 +28,17 @@ app.layout = html.Div(children=[
     html.H1(children='COVID-19'),
 
     html.Div(children='''
-        DASHBOARD EM PYTHON
+        DASHBOARD COVID-19
     '''),
 
     dcc.Graph(
-        id='dashboard',
+        id='covid19',
         figure=fig
-    ]
-    
-)
+    )
+])
+
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
