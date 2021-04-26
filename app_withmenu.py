@@ -13,7 +13,7 @@ df = pd.read_csv("covid19pt_data.csv")
 
 df = df.set_index('data')
 
-# assign colors to column  using a dictionary
+ assign colors to column  using a dictionary
 colors = dict('casos_novos_t':'coral',
           'casos_novos_d':'darkviolet')
 
@@ -53,6 +53,11 @@ updatemenu[0]['showactive'] = True
 
 # add dropdown menus to the figure
 fig.update_layout(showlegend=False, updatemenus=updatemenu)
+
+fig.update_layout(
+  template='plotly_dark',
+  margin=dict(r=10, t=25, b=40, l=60)
+)
 
 # Show Graphics
 fig.show()
