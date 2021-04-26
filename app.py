@@ -7,10 +7,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-# HTML Heading 
 
-myheading='Flying Dog Beers'
-tabtitle='COVID-19'
 
 # Read CSV file 
 
@@ -26,20 +23,19 @@ fig = px.bar(df)
 # fig.show()
 
 
-########### Set up the layout
 app.layout = html.Div(children=[
-    html.H1(myheading),
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for Python.
+    '''),
+
     dcc.Graph(
-        id='flyingdog',
-        figure=fig 
-    ),
-    html.A('Code on Github', href=githublink),
-    html.Br(),
-    html.A('Data Source', href=sourceurl),
-    ]
-)
+        id='example-graph',
+        figure=fig
+    )
+])
 
 if __name__ == '__main__':
-    app.run_server()
-
+    app.run_server(debug=True)
 
