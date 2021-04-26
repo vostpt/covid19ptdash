@@ -7,6 +7,11 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
+# HTML Heading 
+
+myheading='Flying Dog Beers'
+tabtitle='COVID-19'
+
 # Read CSV file 
 
 df = pd.read_csv("covid19pt_data.csv")
