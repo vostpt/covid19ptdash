@@ -23,7 +23,7 @@ fig = go.Figure()
 #set up ONE trace
 fig.add_trace(go.Bar(x=df.index,
 						 y=df[df.columns[0]],
-						 marker_color = '#ffffff',
+						 marker_color = colors,
 						 visible=True))
 
 
