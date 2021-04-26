@@ -14,8 +14,8 @@ df = pd.read_csv("covid19pt_data.csv")
 df = df.set_index('data')
 
 # assign colors to column  using a dictionary
-colors = {'casos_novos_t':'coral',
-          'casos_novos_d':'darkviolet'}
+colors = dict('casos_novos_t':'coral',
+          'casos_novos_d':'darkviolet')
 
 # Assing the chart to a variable 
 fig = go.Figure()
