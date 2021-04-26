@@ -3,6 +3,9 @@
 
 import pandas as pd 
 import plotly.express as px 
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
 
 # Read CSV file 
 
@@ -15,6 +18,23 @@ df = df.set_index('data')
 # Plot
 fig = px.bar(df)
 
-fig.show()
+# fig.show()
+
+
+########### Set up the layout
+app.layout = html.Div(children=[
+    html.H1(myheading),
+    dcc.Graph(
+        id='flyingdog',
+        figure=fig 
+    ),
+    html.A('Code on Github', href=githublink),
+    html.Br(),
+    html.A('Data Source', href=sourceurl),
+    ]
+)
+
+if __name__ == '__main__':
+    app.run_server()
 
 
