@@ -13,9 +13,9 @@ df = pd.read_csv("covid19pt_data.csv")
 
 df = df.set_index('data')
 
- assign colors to column  using a dictionary
-colors = dict('casos_novos_t':'coral',
-          'casos_novos_d':'darkviolet')
+# assign colors to column  using a dictionary
+# colors = dict('casos_novos_t':'coral',
+#         'casos_novos_d':'darkviolet')
 
 # Assing the chart to a variable 
 fig = go.Figure()
@@ -23,7 +23,7 @@ fig = go.Figure()
 #set up ONE trace
 fig.add_trace(go.Bar(x=df.index,
 						 y=df[df.columns[0]],
-						 marker_color = colors,
+						 # marker_color = colors,
 						 visible=True))
 
 
