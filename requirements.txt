@@ -22,7 +22,7 @@ plotly == 4.14.3
 html5lib==1.0.1
 
 # covid19ptdash/app.py: 5
-dash-renderer==1.0.0
+dash-renderer==1.9.1
 
 # covid19ptdash/app.py: 5
 ipython-genutils==0.2.0
